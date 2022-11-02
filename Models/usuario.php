@@ -10,4 +10,11 @@ class Usuario{
     private ?int $documentoUsuario=null;
     private ?int $idRol=null;
 
+    private $connection;
+
+    public function __CONSTRUCT(){
+        $this->connection = Database::Connect();
+
+    }
+    
 }
