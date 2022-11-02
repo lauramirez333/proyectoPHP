@@ -8,7 +8,7 @@ if(isset($_SESSION['user']) || (isset($_POST['correoUsuario']) && isset($_POST['
 if (!isset($_GET['c'])) { //home controller es donde esta la landing page  
     require_once 'Controllers/home.controller.php';
     $controller = new HomeController();
-    call_user_func(array($controller, "index"));
+    call_user_func(array($controller, "index"));//
 } else {
     $controller = $_GET['c'];
     require_once "Controllers/$controller.controller.php";
