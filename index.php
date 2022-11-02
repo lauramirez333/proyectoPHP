@@ -5,7 +5,7 @@ require_once "Models/usuario.php";
 session_start();//iniciamos variable de sesion
 
 if(isset($_SESSION['user']) || (isset($_POST['correoUsuario']) && isset($_POST['contrasenaUsuario'])|| (isset($_GET['Start'])))){ //esto valida que se necesite una sesion iniciada o hacer login para usar cualquier metodo 
-if (!isset($_GET['c'])) { //home controller es donde esta la landing page  
+if (!isset($_GET['c'])) { //home controller es donde esta la landing page  .
     require_once 'Controllers/homeController.php';
     $controller = new HomeController();
     call_user_func(array($controller, "index"));//
